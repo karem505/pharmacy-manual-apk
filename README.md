@@ -4,9 +4,16 @@ An Arabic-first, offline Egyptian drug index and price checker for Android.
 
 ## Download
 
-- **[pharmacy-manual-v0.1.0.apk](https://github.com/karem505/pharmacy-manual-apk/raw/main/pharmacy-manual-v0.1.0.apk)** (about 62 MB)
+- **[pharmacy-manual-v0.2.0.apk](https://github.com/karem505/pharmacy-manual-apk/raw/main/pharmacy-manual-v0.2.0.apk)** (about 62 MB)
 
 To install: download the APK, enable "install from unknown sources" on your Android device, then open the file. This build is signed with a debug key, intended for testing and sideloading.
+
+## What's new in 0.2.0
+
+- A complete visual redesign — the "Clinical Field Guide" look: calm Ink-Blue brand, reserved red/amber/green safety colours, serif drug names with tabular-figure prices, and class-coded chips.
+- New branded app icon and an Arabic app name (دليل الأدوية).
+- Browse now shows therapeutic classes with live counts, manufacturers, and routes — each drills into a filtered list.
+- A clearer drug-detail price checker that highlights the current drug and badges cheaper same-ingredient alternatives.
 
 ## What it does
 
