@@ -4,9 +4,13 @@ An Arabic-first, offline Egyptian drug index and price checker for Android.
 
 ## Download
 
-- **[pharmacy-manual-v0.2.0.apk](https://github.com/karem505/pharmacy-manual-apk/raw/main/pharmacy-manual-v0.2.0.apk)** (about 62 MB)
+- **[pharmacy-manual-v0.2.1.apk](https://github.com/karem505/pharmacy-manual-apk/raw/main/pharmacy-manual-v0.2.1.apk)** (about 62 MB)
 
 To install: download the APK, enable "install from unknown sources" on your Android device, then open the file. This build is signed with a debug key, intended for testing and sideloading.
+
+## What's new in 0.2.1
+
+- Fixes the "check for updates" button — release builds were missing the INTERNET permission, so the database update could not reach GitHub. Updates now pull the latest data correctly.
 
 ## What's new in 0.2.0
 
@@ -17,7 +21,7 @@ To install: download the APK, enable "install from unknown sources" on your Andr
 
 ## What it does
 
-- Bilingual, diacritic-insensitive search across 24,868 medicines (Arabic alias, English name, active ingredient)
+- Bilingual, diacritic-insensitive search across 24,868+ medicines (Arabic alias, English name, active ingredient)
 - Drug detail with a cheapest same-ingredient price comparison (find a cheaper equivalent)
 - Browse by drug class, manufacturer, and route
 - Light and dark themes, Arabic-first RTL throughout
