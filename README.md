@@ -19,6 +19,19 @@ This build is **signed with a release key** (no longer the debug key). If you al
 
 _Previous build: `pharmacy-manual-v0.2.1.apk` (debug-signed, superseded — not recommended)._
 
+## Screenshots
+
+<p>
+  <img src="screenshots/01-search.jpg" width="220" alt="Bilingual search">
+  <img src="screenshots/02-drug-detail-alternatives.jpg" width="220" alt="Drug detail with cheaper same-ingredient alternatives">
+  <img src="screenshots/05-browse-classes.jpg" width="220" alt="Browse by therapeutic class">
+  <img src="screenshots/06-browse-manufacturers-routes.jpg" width="220" alt="Browse by manufacturer and route">
+  <img src="screenshots/03-drug-detail-cream.jpg" width="220" alt="Class-coded chip on a drug detail">
+  <img src="screenshots/04-drug-detail-whitening.jpg" width="220" alt="Drug detail view">
+</p>
+
+▶ **[Watch the demo video](screenshots/demo.mp4)**
+
 ## What's new in 0.2.2
 
 - The app is now **signed with a proper release key** instead of the Android debug key — a stable, tamper-evident identity. All future updates will install cleanly over this one.
