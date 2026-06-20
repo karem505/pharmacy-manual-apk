@@ -4,9 +4,25 @@ An Arabic-first, offline Egyptian drug index and price checker for Android.
 
 ## Download
 
-- **[pharmacy-manual-v0.2.1.apk](https://github.com/karem505/pharmacy-manual-apk/raw/main/pharmacy-manual-v0.2.1.apk)** (about 62 MB)
+- **[pharmacy-manual-v0.2.2.apk](https://github.com/karem505/pharmacy-manual-apk/raw/main/pharmacy-manual-v0.2.2.apk)** (about 62 MB) — current
 
-To install: download the APK, enable "install from unknown sources" on your Android device, then open the file. This build is signed with a debug key, intended for testing and sideloading.
+To install: download the APK, enable "install from unknown sources" on your Android device, then open the file. Works on Android 5.0 and newer.
+
+This build is **signed with a release key** (no longer the debug key). If you already have an older build installed, **uninstall it first** — the new signature will not install over a differently-signed copy.
+
+### Verify your download (optional)
+
+- **SHA-256 of the APK:** `da03c38b3690324f439833cb121d4900181a91827ab1065e0d9afbeb82df0181`
+  (`sha256sum pharmacy-manual-v0.2.2.apk`)
+- **Signing certificate SHA-256:** `98a8ac45aa15f1c068ff8c7a6602592b0472be353bfb22158c43dd53f05b9403`
+  (`apksigner verify --print-certs pharmacy-manual-v0.2.2.apk`)
+
+_Previous build: `pharmacy-manual-v0.2.1.apk` (debug-signed, superseded — not recommended)._
+
+## What's new in 0.2.2
+
+- The app is now **signed with a proper release key** instead of the Android debug key — a stable, tamper-evident identity. All future updates will install cleanly over this one.
+- One-time note: because the signing key changed, anyone on an earlier (debug-signed) build must uninstall it once before installing 0.2.2.
 
 ## What's new in 0.2.1
 
