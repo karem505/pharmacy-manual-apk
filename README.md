@@ -4,7 +4,7 @@ An Arabic-first, offline Egyptian drug index, price checker, **dose calculator**
 
 ## Download
 
-- **[pharmacy-manual-v0.5.0.apk](https://github.com/karem505/pharmacy-manual-apk/raw/main/pharmacy-manual-v0.5.0.apk)** (about 67 MB) — current
+- **[pharmacy-manual-v0.6.0.apk](https://github.com/karem505/pharmacy-manual-apk/raw/main/pharmacy-manual-v0.6.0.apk)** (about 73 MB) — current
 
 To install: download the APK, enable "install from unknown sources" on your Android device, then open the file. Works on Android 7.0 and newer.
 
@@ -12,12 +12,12 @@ This build is **signed with a release key** (v2 + v3 APK Signature Schemes). If 
 
 ### Verify your download (optional)
 
-- **SHA-256 of the APK:** `be1709bce051a2e7f3c2bf87c8991ee7df1fa37f2f25ee020a0708b92711e2e3`
-  (`sha256sum pharmacy-manual-v0.5.0.apk`)
+- **SHA-256 of the APK:** `7371b7b181cae7a03f8c288bfcd0128299e1587b3ab0f6408413deded1d4580f`
+  (`sha256sum pharmacy-manual-v0.6.0.apk`)
 - **Signing certificate SHA-256:** `98a8ac45aa15f1c068ff8c7a6602592b0472be353bfb22158c43dd53f05b9403`
-  (`apksigner verify --print-certs pharmacy-manual-v0.5.0.apk`)
+  (`apksigner verify --print-certs pharmacy-manual-v0.6.0.apk`)
 
-_Previous build: `pharmacy-manual-v0.4.0.apk` (release-signed) is kept for rollback._
+_Previous build: `pharmacy-manual-v0.5.0.apk` (release-signed) is kept for rollback._
 
 ## Screenshots
 
@@ -31,6 +31,13 @@ _Previous build: `pharmacy-manual-v0.4.0.apk` (release-signed) is kept for rollb
 </p>
 
 ▶ **[Watch the demo video](screenshots/demo.mp4)**
+
+## What's new in 0.6.0
+
+- **A much better assistant.** Answers are now properly formatted — headings, lists and tidy **tables** that fit the screen instead of running off the edge. Prices come **only** from the app's database (never a guessed number), and where a drug has many brands at different prices it shows the range.
+- **Understands your photos in context.** Attach one or more photos, add your question, then send. A medicine box is looked up as a **medicine**; a cosmetic's ingredient list is assessed against the cited safety table — and the assistant decides which on its own. Follow-up questions about the same photo now work ("what's its price?").
+- **Web-search fallback.** When something isn't in the app's verified data, the assistant can search the web (using your own Ollama key) and shows the **source as a tappable link**. Web results are clearly marked as external and are **never** used for a dose or a drug interaction — those still come only from the verified, cited data.
+- Runs the assistant at a **higher reasoning level** for more reliable multi-step answers.
 
 ## What's new in 0.5.0
 
