@@ -68,3 +68,4 @@ _Previous build: `pharmacy-manual-v0.2.2.apk` (release-signed) is kept for rollb
 Drug data is released under CC0 from [egyptian-drug-database](https://github.com/karem505/egyptian-drug-database). Dosing is compiled from authoritative formularies and labelling (WHO Model Formulary, BNF, FDA/DailyMed, UK SmPC) and cited per entry. Prices, availability, and dosing recommendations change. **This app is for information only: always verify dose, interactions, and contraindications with the Egyptian Drug Authority, an approved reference, and a licensed pharmacist before any clinical use.**
 
 The application source code is maintained in a separate private repository.
+
