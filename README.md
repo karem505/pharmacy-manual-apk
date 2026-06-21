@@ -1,10 +1,10 @@
 # Pharmacy Manual: APK downloads
 
-An Arabic-first, offline Egyptian drug index, price checker, **dose calculator**, and **drug-interaction checker** for Android.
+An Arabic-first, offline Egyptian drug index, price checker, **dose calculator**, **drug-interaction checker**, and **AI assistant** for Android.
 
 ## Download
 
-- **[pharmacy-manual-v0.4.0.apk](https://github.com/karem505/pharmacy-manual-apk/raw/main/pharmacy-manual-v0.4.0.apk)** (about 63 MB) — current
+- **[pharmacy-manual-v0.5.0.apk](https://github.com/karem505/pharmacy-manual-apk/raw/main/pharmacy-manual-v0.5.0.apk)** (about 67 MB) — current
 
 To install: download the APK, enable "install from unknown sources" on your Android device, then open the file. Works on Android 7.0 and newer.
 
@@ -12,12 +12,12 @@ This build is **signed with a release key** (v2 + v3 APK Signature Schemes). If 
 
 ### Verify your download (optional)
 
-- **SHA-256 of the APK:** `9db088527e43a3122d909a785e6e68841931ef92896fb4d259a7e14178c94220`
-  (`sha256sum pharmacy-manual-v0.4.0.apk`)
+- **SHA-256 of the APK:** `be1709bce051a2e7f3c2bf87c8991ee7df1fa37f2f25ee020a0708b92711e2e3`
+  (`sha256sum pharmacy-manual-v0.5.0.apk`)
 - **Signing certificate SHA-256:** `98a8ac45aa15f1c068ff8c7a6602592b0472be353bfb22158c43dd53f05b9403`
-  (`apksigner verify --print-certs pharmacy-manual-v0.4.0.apk`)
+  (`apksigner verify --print-certs pharmacy-manual-v0.5.0.apk`)
 
-_Previous build: `pharmacy-manual-v0.3.0.apk` (release-signed) is kept for rollback._
+_Previous build: `pharmacy-manual-v0.4.0.apk` (release-signed) is kept for rollback._
 
 ## Screenshots
 
@@ -31,6 +31,12 @@ _Previous build: `pharmacy-manual-v0.3.0.apk` (release-signed) is kept for rollb
 </p>
 
 ▶ **[Watch the demo video](screenshots/demo.mp4)**
+
+## What's new in 0.5.0
+
+- **AI assistant (مساعد ذكي).** A new chat tab answers drug questions in Arabic. Ask about an interaction or a dose and it works by calling the app's **verified, cited** data — it never makes up a dose or interaction, and an uncovered pair is shown as **"not assessed,"** never "safe." It finds the drug you mean even with a typo, and asks you to choose when a name is ambiguous.
+- **Beauty advisor.** Photograph a cosmetic product's ingredient (INCI) panel and the assistant flags each ingredient **green / amber / red** against a **cited safety table of 127 ingredients** (EU Annex III, SCCS, CIR, FDA, IFRA). It reads the label and a curated table does the judging — guidance on ingredients, not a medical diagnosis.
+- **Bring your own AI.** The assistant runs on **Ollama** — add your own API key and pick your text and vision models in Settings. The app ships **no key**, and every other feature keeps working fully offline without it.
 
 ## What's new in 0.4.0
 
@@ -64,6 +70,7 @@ _Previous build: `pharmacy-manual-v0.3.0.apk` (release-signed) is kept for rollb
 
 - Bilingual, diacritic-insensitive search across 24,868+ medicines (Arabic alias, English name, active ingredient)
 - **Drug-interaction checker** — add several drugs and see verified, cited interactions between them (most dangerous first)
+- **AI assistant (optional, bring-your-own Ollama key)** — ask about doses and interactions in Arabic (answered from the verified data only), or photograph a cosmetic ingredient list for a cited green/amber/red safety read
 - **Dose calculator and verified reference dosing** on each drug page, plus BSA, creatinine clearance, and infusion-rate tools
 - Drug detail with a cheapest same-ingredient price comparison (find a cheaper equivalent)
 - Browse by drug class, manufacturer, and route
@@ -73,5 +80,7 @@ _Previous build: `pharmacy-manual-v0.3.0.apk` (release-signed) is kept for rollb
 ## Data and disclaimer
 
 Drug data is released under CC0 from [egyptian-drug-database](https://github.com/karem505/egyptian-drug-database). Dosing and interactions are compiled from authoritative formularies and labelling (WHO Model Formulary, BNF, FDA/DailyMed, UK SmPC, Drugs.com, Medscape, Stockley's) and cited per entry. Prices, availability, dosing, and interaction recommendations change, and the interaction table is a curated high-value set, not exhaustive. **This app is for information only: always verify dose, interactions, and contraindications with the Egyptian Drug Authority, an approved reference, and a licensed pharmacist before any clinical use.**
+
+The optional AI assistant requires **your own Ollama API key**; your questions and any photo you attach are sent to that service, and its answers are advisory only. The cosmetic-ingredient guidance is not a medical diagnosis — see a dermatologist for any concerning skin condition. As with everything here, verify before any clinical use.
 
 The application source code is maintained in a separate private repository.
