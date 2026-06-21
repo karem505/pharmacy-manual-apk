@@ -1,0 +1,32 @@
+name: Revalidate website on new APK
+
+# When a new APK (or the README's verify hashes) is pushed, tell
+# aboelmakarem.pro to refresh the Pharmacy Manual download page, the /apps hub,
+# and the download link immediately — instead of waiting for the 5-min ISR
+# window. The website's /api/revalidate validates REVALIDATE_SECRET, then
+# revalidateTag('pharmacy-apk') busts the cached GitHub lookups everywhere.
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.apk'
+      - 'README.md'
+  workflow_dispatch: {}
+
+jobs:
+  revalidate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping revalidate webhook
+        env:
+          SECRET: ${{ secrets.REVALIDATE_SECRET }}
+        run: |
+          if [ -z "$SECRET" ]; then
+            echo "::error::REVALIDATE_SECRET is not set in this repo's Actions secrets."
+            exit 1
+          fi
+          curl -fsS -X POST "https://aboelmakarem.pro/api/revalidate" \
+            -H "Content-Type: application/json" \
+            -d "{\"secret\":\"$SECRET\",\"tag\":\"pharmacy-apk\",\"path\":\"/apps/pharmacy-manual,/apps\"}"
+          echo
+          echo "Revalidation requested (tag=pharmacy-apk, paths=/apps/pharmacy-manual,/apps)."
