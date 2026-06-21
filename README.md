@@ -1,23 +1,23 @@
 # Pharmacy Manual: APK downloads
 
-An Arabic-first, offline Egyptian drug index, price checker, and **dose calculator** for Android.
+An Arabic-first, offline Egyptian drug index, price checker, **dose calculator**, and **drug-interaction checker** for Android.
 
 ## Download
 
-- **[pharmacy-manual-v0.3.0.apk](https://github.com/karem505/pharmacy-manual-apk/raw/main/pharmacy-manual-v0.3.0.apk)** (about 62 MB) — current
+- **[pharmacy-manual-v0.4.0.apk](https://github.com/karem505/pharmacy-manual-apk/raw/main/pharmacy-manual-v0.4.0.apk)** (about 63 MB) — current
 
-To install: download the APK, enable "install from unknown sources" on your Android device, then open the file. Works on Android 5.0 and newer.
+To install: download the APK, enable "install from unknown sources" on your Android device, then open the file. Works on Android 7.0 and newer.
 
-This build is **signed with a release key** (v1+v2+v3). If you already have an older build installed, **uninstall it first** — a differently-signed copy will not install over it.
+This build is **signed with a release key** (v2 + v3 APK Signature Schemes). If you already have an older build installed, **uninstall it first** — a differently-signed copy will not install over it.
 
 ### Verify your download (optional)
 
-- **SHA-256 of the APK:** `9723f39c6645f7ecbc87a6fffaebd0d090098f0d06bf840001bed295e7117a7b`
-  (`sha256sum pharmacy-manual-v0.3.0.apk`)
+- **SHA-256 of the APK:** `9db088527e43a3122d909a785e6e68841931ef92896fb4d259a7e14178c94220`
+  (`sha256sum pharmacy-manual-v0.4.0.apk`)
 - **Signing certificate SHA-256:** `98a8ac45aa15f1c068ff8c7a6602592b0472be353bfb22158c43dd53f05b9403`
-  (`apksigner verify --print-certs pharmacy-manual-v0.3.0.apk`)
+  (`apksigner verify --print-certs pharmacy-manual-v0.4.0.apk`)
 
-_Previous build: `pharmacy-manual-v0.2.2.apk` (release-signed) is kept for rollback._
+_Previous build: `pharmacy-manual-v0.3.0.apk` (release-signed) is kept for rollback._
 
 ## Screenshots
 
@@ -31,6 +31,12 @@ _Previous build: `pharmacy-manual-v0.2.2.apk` (release-signed) is kept for rollb
 </p>
 
 ▶ **[Watch the demo video](screenshots/demo.mp4)**
+
+## What's new in 0.4.0
+
+- **Drug-interaction checker.** Add two or more drugs and the app cross-checks every pair, sorting the most dangerous interaction to the top. Each result shows the severity (major / caution), the mechanism, a recommended action, the interaction type (pharmacodynamic, pharmacokinetic, or physical/chemical), and its source.
+- **176 verified, cited interactions** plus 18 commonly co-prescribed "no significant interaction" pairs — generated from drugs actually in the Egyptian market, then each pair independently researched and double-checked against Drugs.com, Medscape, BNF, FDA labels, and Stockley's.
+- **Honest about coverage.** A pair we have not verified is shown as **"not assessed — verify manually"**, never as a false "safe". Green is reserved for pairs explicitly verified as clinically insignificant.
 
 ## What's new in 0.3.0
 
@@ -57,6 +63,7 @@ _Previous build: `pharmacy-manual-v0.2.2.apk` (release-signed) is kept for rollb
 ## What it does
 
 - Bilingual, diacritic-insensitive search across 24,868+ medicines (Arabic alias, English name, active ingredient)
+- **Drug-interaction checker** — add several drugs and see verified, cited interactions between them (most dangerous first)
 - **Dose calculator and verified reference dosing** on each drug page, plus BSA, creatinine clearance, and infusion-rate tools
 - Drug detail with a cheapest same-ingredient price comparison (find a cheaper equivalent)
 - Browse by drug class, manufacturer, and route
@@ -65,7 +72,6 @@ _Previous build: `pharmacy-manual-v0.2.2.apk` (release-signed) is kept for rollb
 
 ## Data and disclaimer
 
-Drug data is released under CC0 from [egyptian-drug-database](https://github.com/karem505/egyptian-drug-database). Dosing is compiled from authoritative formularies and labelling (WHO Model Formulary, BNF, FDA/DailyMed, UK SmPC) and cited per entry. Prices, availability, and dosing recommendations change. **This app is for information only: always verify dose, interactions, and contraindications with the Egyptian Drug Authority, an approved reference, and a licensed pharmacist before any clinical use.**
+Drug data is released under CC0 from [egyptian-drug-database](https://github.com/karem505/egyptian-drug-database). Dosing and interactions are compiled from authoritative formularies and labelling (WHO Model Formulary, BNF, FDA/DailyMed, UK SmPC, Drugs.com, Medscape, Stockley's) and cited per entry. Prices, availability, dosing, and interaction recommendations change, and the interaction table is a curated high-value set, not exhaustive. **This app is for information only: always verify dose, interactions, and contraindications with the Egyptian Drug Authority, an approved reference, and a licensed pharmacist before any clinical use.**
 
 The application source code is maintained in a separate private repository.
-
